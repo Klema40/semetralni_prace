@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtlasFit | Vědecký přístup k fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="glow-bg"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Atlas<span>Fit</span></div>
+            <ul class="nav-links">
+                <li><a href="#atlas">Atlas cviků</a></li>
+                <li><a href="#kalkulacka">Kalkulačka</a></li>
+                <li><a href="#suplementace">Suplementace</a></li>
+                <li><a href="#kviz">Kvíz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="reveal-text">Posouvej své hranice <br><span class="text-gradient">podloženě.</span></h1>
+            <p class="hero-subtext">Komplexní vzdělávací platforma pro moderní fitness. Biomechanika, fyziologie a data v jednom atlasu.</p>
+            <div class="hero-btns">
+                <a href="#atlas" class="btn btn-primary">Prozkoumat atlas</a>
+                <a href="#kalkulacka" class="btn btn-secondary">Spočítat makra</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="atlas" class="section">
+        <div class="container">
+            <h2 class="section-title">Interaktivní Atlas Cviků</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Vše</button>
+                <button class="filter-btn" data-filter="zada">Záda</button>
+                <button class="filter-btn" data-filter="hrudnik">Hrudník</button>
+                <button class="filter-btn" data-filter="nohy">Nohy</button>
+                <button class="filter-btn" data-filter="ramena">Ramena</button>
+            </div>
+
+            <div class="exercise-grid" id="exerciseGrid">
+                <!-- Cviky budou generovány pomocí JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="kalkulacka" class="section bg-alt">
+        <div class="container">
+            <div class="calc-wrapper">
+                <div class="calc-info">
+                    <h2 class="section-title">Edukativní Kalkulačka</h2>
+                    <p>Využíváme revidovaný <strong>Mifflin-St Jeor vzorec</strong>, který je považován za nejpřesnější pro běžnou populaci. Naše kalkulačka neřeší jen kalorie, ale optimalizuje příjem bílkovin pro ochranu svalové hmoty (MPS).</p>
+                    <div class="science-box">
+                        <i data-lucide="info"></i>
+                        <span>V deficitu doporučujeme až 2.2g bílkovin na kg TH pro maximalizaci proteosyntézy.</span>
+                    </div>
+                </div>
+                <div class="calc-card">
+                    <form id="bmr-form">
+                        <div class="form-group">
+                            <label>Pohlaví</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="gender" value="male" checked> Muž</label>
+                                <label><input type="radio" name="gender" value="female"> Žena</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Věk</label>
+                                <input type="number" id="age" placeholder="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Váha (kg)</label>
+                                <input type="number" id="weight" placeholder="80" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Výška (cm)</label>
+                            <input type="number" id="height" placeholder="180" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Aktivita</label>
+                            <select id="activity">
+                                <option value="1.2">Sedavý (kancelář)</option>
+                                <option value="1.375">Lehký (1-3 dny/týden)</option>
+                                <option value="1.55">Střední (3-5 dní/týden)</option>
+                                <option value="1.725">Vysoký (6-7 dní/týden)</option>
+                                <option value="1.9">Extrémní (profesionál)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Vypočítat analýzu</button>
+                    </form>
+                    <div id="calc-results" class="results-hidden">
+                        <div class="result-item">
+                            <span>BMR (Bazál):</span>
+                            <strong id="res-bmr">0 kcal</strong>
+                        </div>
+                        <div class="result-item highlight">
+                            <span>TDEE (Výdej):</span>
+                            <strong id="res-tdee">0 kcal</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Bílkoviny:</span>
+                            <strong id="res-protein">0 g</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="suplementace" class="section">
+        <div class="container">
+            <h2 class="section-title">Vědecká suplementace</h2>
+            <div class="supp-grid">
+                <div class="supp-card">
+                    <div class="supp-icon"><i data-lucide="zap"></i></div>
+                    <h3>Hořčík: Formy</h3>
+                    <p>Zapomeňte na oxid hořčíku (vstřebatelnost ~4%). Volte <strong>Bisglycinát</strong> pro regeneraci a spánek nebo <strong>Malát</strong> pro energii.</p>
+                </div>
+                <div class="supp-card">
+                    <div class="supp-icon"><i data-lucide="flask-conical"></i></div>
+                    <h3>Kreatin Monohydrát</h3>
+                    <p>Nejprozkoumanější suplement. Zvyšuje zásoby ATP. Nasycovací fáze není nutná, stačí 5g denně dlouhodobě.</p>
+                </div>
+                <div class="supp-card">
+                    <div class="supp-icon"><i data-lucide="sun"></i></div>
+                    <h3>D3 + K2</h3>
+                    <p>Synergie pro zdraví kostí a imunitu. K2 směřuje vápník do kostí a brání jeho ukládání v cévách.</p>
+                </div>
+                <div class="supp-card">
+                    <div class="supp-icon"><i data-lucide="moon"></i></div>
+                    <h3>Fáze NREM</h3>
+                    <p>Během hlubokého spánku (NREM) dochází k největší sekreci růstového hormonu. Spánek je základní anabolikum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kviz" class="section bg-alt">
+        <div class="container">
+            <div class="quiz-container">
+                <h2 class="section-title text-center">Kvíz: Mýty vs. Fakta</h2>
+                <div id="quiz-box">
+                    <!-- JS generovaný kvíz -->
+                </div>
+                <div id="quiz-result" class="hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AtlasFit - Ročníkový projekt. Vědecky podložené fitness.</p>
+        </div>
+    </footer>
+
+    <!-- Modal pro detaily cviků -->
+    <div id="exercise-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
