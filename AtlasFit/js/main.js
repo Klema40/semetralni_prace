@@ -58,48 +58,88 @@ const exercises = [
         longDesc: "Overhead Press buduje masivní ramena a sílu tricepsu. Vyžaduje dobrou mobilitu hrudní páteře.",
         tips: "Nezaklánějte se v bednech. Zpevněte hýždě a břicho (core).",
         mechanics: "Scapulohumerální rytmus musí být plynulý, aby nedocházelo k impingementu ramene."
+    },
+    {
+        id: 7,
+        name: "Legpress",
+        tag: "nohy",
+        category: "Nohy / Kvadricepsy",
+        desc: "Skvělá izolace nohou bez tlaku na páteř.",
+        longDesc: "Legpress umožňuje bezpečné zacílení na kvadricepsy a hýždě díky fixované poloze zad.",
+        tips: "Nepropínejte kolena do zámku v horní pozici. Chodidla mějte v šíři ramen.",
+        mechanics: "Změna postavení chodidel na desce mění poměr zapojení mezi m. quadriceps femoris a hýžďovými svaly."
+    },
+    {
+        id: 8,
+        name: "Upažování s jednoručkami",
+        tag: "ramena",
+        category: "Ramena / Boční delty",
+        desc: "Klíčový cvik pro šířku ramen.",
+        longDesc: "Izolovaný cvik na boční (střední) hlavu deltového svalu. Pomáhá budovat 'V' tvar postavy.",
+        tips: "Nezvedejte činky nad úroveň ramen. Malíčky směřujte mírně nahoru.",
+        mechanics: "Pohyb probíhá ve frontální rovině (abdukce). Největší napětí je v horní polovině dráhy."
+    },
+    {
+        id: 9,
+        name: "Kliky na bradlech (Dips)",
+        tag: "hrudnik",
+        category: "Hrudník / Triceps",
+        desc: "Komplexní cvik na spodní část hrudníku.",
+        longDesc: "Dips jsou skvělým cvikem pro rozvoj síly a objemu hrudníku a tricepsu. Předklon cílí více na prsa.",
+        tips: "Pro cílení na hrudník se mírně předkloňte a lokty nechte jít do stran.",
+        mechanics: "Kombinace flexe v lokti a addukce v rameni vytváří vysoké napětí v dolních vláknech pectoralis major."
+    },
+    {
+        id: 10,
+        name: "Rumunský mrtvý tah (RDL)",
+        tag: "nohy",
+        category: "Nohy / Hamstringy",
+        desc: "Nejlepší cvik na zadní stranu stehen.",
+        longDesc: "RDL se zaměřuje na excentrickou fázi a protažení hamstringů a hýždí.",
+        tips: "Činku spouštějte těsně u nohou a končete tam, kde cítíte maximální tah v hamstrinzích.",
+        mechanics: "Čistý kyčelní ohyb (hip hinge) s minimálním pokrčením v kolenou maximalizuje protažení hamstringů."
+    },
+    {
+        id: 11,
+        name: "Přítahy s T-osou",
+        tag: "zada",
+        category: "Záda / Střed zad",
+        desc: "Budování tloušťky zad.",
+        longDesc: "Přítahy T-osy v předklonu skvěle budují tloušťku zad, trapézy a mezilopatkové svaly.",
+        tips: "Udržujte pevný střed těla a rovná záda. Táhněte lokty co nejvíce za tělo.",
+        mechanics: "Horizontální tah zapojuje výrazně retrakci lopatek (m. rhomboideus, m. trapezius)."
+    },
+    {
+        id: 12,
+        name: "Tlaky s jednoručkami na šikmé lavici",
+        tag: "hrudnik",
+        category: "Hrudník / Horní část",
+        desc: "Cílení na horní vlákna prsou.",
+        longDesc: "Sklon lavice (30-45 stupňů) přesouvá důraz na klavikulární (horní) část velkého prsního svalu.",
+        tips: "Jednoručky umožňují větší rozsah pohybu v dolní fázi než velká činka.",
+        mechanics: "Zvýšený úhel flexe v rameni zvyšuje nábor horních vláken pectoralis major."
     }
 ];
 
-const quizData = [
-    {
-        q: "Kolik bílkovin je optimální pro maximální svalový růst?",
-        options: ["0.8 g/kg", "1.6 - 2.2 g/kg", "5 g/kg"],
-        correct: 1,
-        expl: "Většina studií ukazuje, že hranice 1.6 - 2.2 g/kg tělesné hmotnosti je pro naturální cvičence naprosto dostačující. Vyšší příjem už nepřináší benefit pro MPS."
-    },
-    {
-        q: "Je nutné pít protein ihned po tréninku (anabolické okno)?",
-        options: ["Ano, jinak svaly nerostou", "Ne, důležitý je celkový denní příjem", "Jen pokud cvičíte nalačno"],
-        correct: 1,
-        expl: "Anabolické okno trvá mnohem déle než 30 minut (v řádu hodin). Celkový příjem bílkovin za den je zásadnějším faktorem pro hypertrofii."
-    },
-    {
-        q: "Která forma hořčíku je nejvhodnější před spaním?",
-        options: ["Magnesium Oxid", "Magnesium Bisglycinát", "Magnesium Citrát"],
-        correct: 1,
-        expl: "Bisglycinát je vázán na aminokyselinu glycin, která má uklidňující účinky na centrální nervovou soustavu a zlepšuje kvalitu spánku."
-    },
-    {
-        q: "Pomůže 'kardio nalačno' spalovat více tuku než kardio po jídle?",
-        options: ["Ano, pálí se přímo tukové zásoby", "Ne, výsledky jsou z dlouhodobého hlediska stejné", "Jen u profesionálních kulturistů"],
-        correct: 1,
-        expl: "Studie ukazují, že za 24 hodin tělo vyrovná oxidaci živin. Nejdůležitější je celkový kalorický deficit na konci dne."
-    },
-    {
-        q: "Musí se každý trénink cvičit do úplného svalového selhání?",
-        options: ["Ano, bez selhání svaly nerostou", "Ne, stačí se k selhání přiblížit (RPE 8-9)", "Selhání je mýtus"],
-        correct: 1,
-        expl: "Trénink do selhání je vyčerpávající pro CNS. Pro hypertrofii stačí nechat si v rezervě 1-3 opakování (RIR 1-3)."
-    }
-];
+
 
 // DOM Elements
 const exerciseGrid = document.getElementById('exerciseGrid');
 const filterBtns = document.querySelectorAll('.filter-btn');
-const bmrForm = document.getElementById('bmr-form');
-const calcResults = document.getElementById('calc-results');
-const quizBox = document.getElementById('quiz-box');
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Menu Toggle Logic
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
 
 // Exercise Logic
 function renderExercises(filter = 'all') {
@@ -142,78 +182,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Calculator Logic
-bmrForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const gender = document.querySelector('input[name="gender"]:checked').value;
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value);
-    const age = parseInt(document.getElementById('age').value);
-    const activity = parseFloat(document.getElementById('activity').value);
 
-    // Mifflin-St Jeor
-    let bmr;
-    if (gender === 'male') {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-    } else {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-    }
-
-    const tdee = bmr * activity;
-    const protein = weight * 2.0;
-
-    document.getElementById('res-bmr').innerText = Math.round(bmr) + ' kcal';
-    document.getElementById('res-tdee').innerText = Math.round(tdee) + ' kcal';
-    document.getElementById('res-protein').innerText = Math.round(protein) + ' g';
-    
-    calcResults.classList.remove('results-hidden');
-});
-
-// Quiz Logic
-function renderQuiz() {
-    quizBox.innerHTML = '';
-    quizData.forEach((q, idx) => {
-        const qDiv = document.createElement('div');
-        qDiv.className = 'quiz-q';
-        qDiv.innerHTML = `<p style="margin-bottom: 1rem; font-weight:600;">${idx+1}. ${q.q}</p>`;
-        
-        q.options.forEach((opt, oIdx) => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-option';
-            btn.innerText = opt;
-            btn.onclick = () => checkAnswer(btn, idx, oIdx);
-            qDiv.appendChild(btn);
-        });
-        
-        const expl = document.createElement('p');
-        expl.className = 'quiz-expl hidden';
-        expl.id = `expl-${idx}`;
-        expl.style.fontSize = '0.9rem';
-        expl.style.marginTop = '1rem';
-        expl.style.color = 'var(--text-dim)';
-        qDiv.appendChild(expl);
-        
-        quizBox.appendChild(qDiv);
-    });
-}
-
-function checkAnswer(btn, qIdx, oIdx) {
-    const correct = quizData[qIdx].correct;
-    const expl = document.getElementById(`expl-${qIdx}`);
-    const options = btn.parentElement.querySelectorAll('.quiz-option');
-    
-    options.forEach(opt => opt.disabled = true);
-    
-    if (oIdx === correct) {
-        btn.classList.add('correct');
-    } else {
-        btn.classList.add('wrong');
-        options[correct].classList.add('correct');
-    }
-    
-    expl.innerText = quizData[qIdx].expl;
-    expl.classList.remove('hidden');
-}
 
 // Modal closing
 document.querySelector('.close-modal').onclick = () => {
@@ -229,4 +198,3 @@ window.onclick = (event) => {
 
 // Initial render
 renderExercises();
-renderQuiz();

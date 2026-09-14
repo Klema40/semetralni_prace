@@ -18,10 +18,12 @@
             <div class="logo">Atlas<span>Fit</span></div>
             <ul class="nav-links">
                 <li><a href="#atlas">Atlas cviků</a></li>
-                <li><a href="#kalkulacka">Kalkulačka</a></li>
+                <li><a href="#vyziva">Výživa</a></li>
                 <li><a href="#suplementace">Suplementace</a></li>
-                <li><a href="#kviz">Kvíz</a></li>
             </ul>
+            <button class="menu-toggle" id="menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
     </nav>
 
@@ -31,7 +33,7 @@
             <p class="hero-subtext">Komplexní vzdělávací platforma pro moderní fitness. Biomechanika, fyziologie a data v jednom atlasu.</p>
             <div class="hero-btns">
                 <a href="#atlas" class="btn btn-primary">Prozkoumat atlas</a>
-                <a href="#kalkulacka" class="btn btn-secondary">Spočítat makra</a>
+                <a href="#vyziva" class="btn btn-secondary">Zásady výživy</a>
             </div>
         </div>
     </header>
@@ -53,66 +55,33 @@
         </div>
     </section>
 
-    <section id="kalkulacka" class="section bg-alt">
+    <section id="vyziva" class="section bg-alt">
         <div class="container">
-            <div class="calc-wrapper">
-                <div class="calc-info">
-                    <h2 class="section-title">Edukativní Kalkulačka</h2>
-                    <p>Využíváme revidovaný <strong>Mifflin-St Jeor vzorec</strong>, který je považován za nejpřesnější pro běžnou populaci. Naše kalkulačka neřeší jen kalorie, ale optimalizuje příjem bílkovin pro ochranu svalové hmoty (MPS).</p>
-                    <div class="science-box">
-                        <i data-lucide="info"></i>
-                        <span>V deficitu doporučujeme až 2.2g bílkovin na kg TH pro maximalizaci proteosyntézy.</span>
-                    </div>
+            <h2 class="section-title">Základy výživy</h2>
+            <div class="nutrition-grid">
+                <div class="nutrition-card">
+                    <h3>Energetická bilance</h3>
+                    <p>Základní kámen každé změny postavy. Pro hubnutí je nutný <strong>kalorický deficit</strong>, pro nabírání svalů mírný <strong>nadbytek</strong>. Kvalita potravin je důležitá, ale množství energie určuje směr.</p>
                 </div>
-                <div class="calc-card">
-                    <form id="bmr-form">
-                        <div class="form-group">
-                            <label>Pohlaví</label>
-                            <div class="radio-group">
-                                <label><input type="radio" name="gender" value="male" checked> Muž</label>
-                                <label><input type="radio" name="gender" value="female"> Žena</label>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Věk</label>
-                                <input type="number" id="age" placeholder="25" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Váha (kg)</label>
-                                <input type="number" id="weight" placeholder="80" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Výška (cm)</label>
-                            <input type="number" id="height" placeholder="180" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Aktivita</label>
-                            <select id="activity">
-                                <option value="1.2">Sedavý (kancelář)</option>
-                                <option value="1.375">Lehký (1-3 dny/týden)</option>
-                                <option value="1.55">Střední (3-5 dní/týden)</option>
-                                <option value="1.725">Vysoký (6-7 dní/týden)</option>
-                                <option value="1.9">Extrémní (profesionál)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Vypočítat analýzu</button>
-                    </form>
-                    <div id="calc-results" class="results-hidden">
-                        <div class="result-item">
-                            <span>BMR (Bazál):</span>
-                            <strong id="res-bmr">0 kcal</strong>
-                        </div>
-                        <div class="result-item highlight">
-                            <span>TDEE (Výdej):</span>
-                            <strong id="res-tdee">0 kcal</strong>
-                        </div>
-                        <div class="result-item">
-                            <span>Bílkoviny:</span>
-                            <strong id="res-protein">0 g</strong>
-                        </div>
-                    </div>
+                <div class="nutrition-card">
+                    <h3>Bílkoviny (Proteiny)</h3>
+                    <p>Základní stavební kámen svalů. Cílte na <strong>1.6 – 2.2 g na kg</strong> tělesné hmotnosti. Zdroje: maso, vejce, mléčné výrobky, luštěniny, tofu.</p>
+                </div>
+                <div class="nutrition-card">
+                    <h3>Sacharidy</h3>
+                    <p>Hlavní zdroj energie pro intenzivní trénink. Komplexní zdroje (rýže, brambory, ovesné vločky) dodávají energii postupně, jednoduché (ovoce) jsou skvělé před/po výkonu.</p>
+                </div>
+                <div class="nutrition-card">
+                    <h3>Tuky</h3>
+                    <p>Nezbytné pro hormonální zdraví a vstřebávání vitamínů. Upřednostňujte nenasycené tuky z ořechů, olivového oleje, avokáda a tučných ryb.</p>
+                </div>
+                <div class="nutrition-card">
+                    <h3>Mikroživiny a Vláknina</h3>
+                    <p>Vitamíny a minerály z ovoce a zeleniny podporují regeneraci a imunitu. Vláknina (cca 30g denně) je klíčová pro zdravé trávení a pocit sytosti.</p>
+                </div>
+                <div class="nutrition-card">
+                    <h3>Hydratace</h3>
+                    <p>Voda tvoří většinu svalové tkáně. Už 2% dehydratace výrazně snižuje silový výkon. Pijte průběžně po celý den, nejen při tréninku.</p>
                 </div>
             </div>
         </div>
@@ -146,17 +115,7 @@
         </div>
     </section>
 
-    <section id="kviz" class="section bg-alt">
-        <div class="container">
-            <div class="quiz-container">
-                <h2 class="section-title text-center">Kvíz: Mýty vs. Fakta</h2>
-                <div id="quiz-box">
-                    <!-- JS generovaný kvíz -->
-                </div>
-                <div id="quiz-result" class="hidden"></div>
-            </div>
-        </div>
-    </section>
+
 
     <footer class="footer">
         <div class="container">
